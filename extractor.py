@@ -24,17 +24,15 @@ for root, dirs, files in os.walk("wiki_extractor"): # wiki_extractor 為資料�
             data=""
             for line in f:
                 content=line.decode("utf-8").replace('\n','')
-                if content is not "" and "</doc>" not in content:
-                    if "<doc" not in content:
+                if content is not "":
+                    if "</doc>" in content and data is not "":
+                        data=opencc.convert(data)
+                        data_dict[key_num]=data
+                        key_num+=1
+                        data=""
+                    elif "<doc" not in content:
                         data+=content+'\n'
-                    else:
-                        if data is not "":
-                            data=opencc.convert(data)
-                            data_dict[key_num]=data
-                            key_num+=1
-                            data=""
-
-
+                    
 jsonString = json.dumps(data_dict,ensure_ascii=False,indent=4)
 fname = "wiki_data.json"
 fout = open(fname,'w',encoding = 'UTF-8')
