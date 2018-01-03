@@ -1,6 +1,6 @@
 # Wiki_Extractor
 
-先把github上的資料clone到本地端(壓縮後資料夾名稱為Wiki_Extractor-master)
+先把github上的資料clone到本地端(解壓縮後資料夾名稱為Wiki_Extractor-master)
 
 ## 下載維基百科資料
 
