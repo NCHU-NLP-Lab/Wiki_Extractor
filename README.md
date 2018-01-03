@@ -1,6 +1,6 @@
 # Wiki_Extractor
 
-先把github上的資料clone到本地端
+先把github上的資料clone到本地端(壓縮後資料夾名稱為Wiki_Extractor-master)
 
 ## 下載維基百科資料
 
@@ -27,16 +27,17 @@ https://mobaxterm.mobatek.net/
 
 --
 
-* 將左方視窗中zhwiki-latest-pages-articles.xml.bz2檔案下載並放於此專案中
+* 將左方視窗中zhwiki-latest-pages-articles.xml.bz2檔案下載並放於此專案目錄下(Wiki_Extractor-master資料夾中)
 
-這裡有圖片!!!!!!!!!!!!!
+<img src="https://i.imgur.com/JiYPVNG.jpg" align="left"/>
 
+--
 
 ## 切割維基百科
 
 因為一個維基百科的檔案過大，需要將他分割成多個小檔案
 
-* 開啟cmd，切換路徑至此專案目錄
+* 開啟cmd，切換路徑至此專案目錄(切換至Wiki_Extractor-master目錄下)
 
 * 輸入分割檔案指令
 
@@ -44,7 +45,7 @@ https://mobaxterm.mobatek.net/
 python WikiExtractor.py -cb 250K -o wiki_extractor zhwiki-latest-pages-articles.xml.bz2
 ```
 
-* 切割檔案後將資料整理為一個dict之json檔
+* 切割檔案後將資料整理為一個dict之json檔(wiki_data.json)
 ``` 
 python extractor.py
 ```
