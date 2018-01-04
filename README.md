@@ -51,7 +51,15 @@ https://mobaxterm.mobatek.net/
 python WikiExtractor.py -cb 250K -o wiki_extractor zhwiki-latest-pages-articles.xml.bz2
 ```
 
-* 切割檔案後將資料整理為一個dict之json檔(wiki_data.json)
+這個指令會將1G大的維基百科資料切割為每一份250K大小、檔案型態為.bz2的檔案
+
+-cb 就是將每個切割檔案壓縮成.bz2的型態
+
+-o 就是輸出檔案
+
+指令中的"wiki_extractor"就是將每個分割好的檔案放入置此資料夾(它會自動新增資料夾，不用手動新增)
+
+* 切割檔案後將資料整理為一個字典之json檔(wiki_data.json)
 ``` 
 python extractor.py
 ```
