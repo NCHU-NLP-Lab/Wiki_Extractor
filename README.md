@@ -1,10 +1,16 @@
 # Wiki_Extractor
 
-先把github上的資料clone到本地端(解壓縮後資料夾名稱為Wiki_Extractor-master)
+* 先把github上的資料clone到本地端(解壓縮後資料夾名稱為Wiki_Extractor-master)
+
+opencc資料夾為簡體中文轉繁體中文之套件
+
+WikiExtractor.py為分割維基百科檔案之程式
+
+extractor.py是將維基百科資料轉換為字典之json檔案
 
 ## 下載維基百科資料
 
-下載MobaXterm並安裝完成、登入
+* 下載MobaXterm並安裝完成、登入
 
 https://mobaxterm.mobatek.net/ 
 
