@@ -14,19 +14,19 @@ extractor.py是將維基百科資料轉換為字典之json檔案
 
 https://mobaxterm.mobatek.net/ 
 
-### 登入方式: 
+### 登入方式 : 
 
 * 開啟mobaXterm => 點選左上角Session => 點選SSH  
 
-* Remote host: 140.120.13.242
+* Remote host : 140.120.13.242
 
-* Specify username: amd
+* Specify username : amd
 
-* port: 15555
+* port : 15555
 
 * 點選"OK"
 
-* 輸入密碼: 123
+* 輸入密碼 : 123
 
 
 <img src="https://i.imgur.com/Y9lolhT.jpg" align="left"/>
