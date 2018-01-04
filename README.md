@@ -60,6 +60,8 @@ python WikiExtractor.py -cb 250K -o wiki_extractor zhwiki-latest-pages-articles.
 指令中的"wiki_extractor"將每個分割好的檔案放入至此資料夾(它會自動新增資料夾，不用手動新增)
 
 * 切割檔案後將資料整理為一個字典之json檔(wiki_data.json)
+
+接著執行 extractor.py 取得一個json檔案，內容如下：
 ``` 
 python extractor.py
 ```
