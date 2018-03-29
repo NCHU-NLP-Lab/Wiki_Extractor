@@ -72,6 +72,8 @@ python extractor.py
 
 底下的連結有我們整理好已斷詞的wiki data
 
+https://drive.google.com/open?id=1jl_D2jPDo83qHkpXMliZBsp2Pk6B5RWy
+
 分成兩種不同的資料格式
 
 每一種資料格式都有兩種資料，其一為斷詞後無標記詞性，另一個為斷詞後有標記詞性
