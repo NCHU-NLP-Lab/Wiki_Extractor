@@ -85,4 +85,5 @@ https://drive.google.com/open?id=1jl_D2jPDo83qHkpXMliZBsp2Pk6B5RWy
 ### 一個是將每個詞給斷開放入List中
 <img src="https://i.imgur.com/LjVKIy9.jpg" width="900px" />
 
+<img src="https://i.imgur.com/Nd73Joy.jpg" width="900px" />
 
