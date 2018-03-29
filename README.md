@@ -68,6 +68,19 @@ python extractor.py
 
 <img src="https://i.imgur.com/8Xk3rIr.jpg" width="900px"/>
 
+## 下載資料
 
+底下的連結有我們整理好已斷詞的wiki data
+
+分成兩種不同的資料格式
+
+每一種資料格式都有兩種資料，其一為斷詞後無標記詞性，另一個為斷詞後有標記詞性
+
+至於資料格式.....
+### 一個是使用空白將每個詞給斷開
+<img src="https://i.imgur.com/IBy9Y8r.jpg" width="900px" />
+
+### 一個是將每個詞給斷開放入List中
+<img src="https://i.imgur.com/LjVKIy9.jpg" width="900px" />
 
 
