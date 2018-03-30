@@ -82,6 +82,8 @@ https://drive.google.com/open?id=1jl_D2jPDo83qHkpXMliZBsp2Pk6B5RWy
 ### 一個是使用空白將每個詞給斷開
 <img src="https://i.imgur.com/IBy9Y8r.jpg" width="900px" />
 
+<img src="https://i.imgur.com/WbHfgwf.jpg" width="900px" />
+
 ### 一個是將每個詞給斷開放入List中
 <img src="https://i.imgur.com/LjVKIy9.jpg" width="900px" />
 
