@@ -18,15 +18,15 @@ https://mobaxterm.mobatek.net/
 
 * 開啟mobaXterm => 點選左上角Session => 點選SSH  
 
-* Remote host : 140.120.13.242
+* Remote host : xxx.xxx.xxx.xx
 
-* Specify username : amd
+* Specify username : xxx
 
-* port : 15555
+* port : xxx
 
 * 點選"OK"
 
-* 輸入密碼 : 123
+* 輸入密碼 : xxxx
 
 
 <img src="https://i.imgur.com/Y9lolhT.jpg" align="left"/>
