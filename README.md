@@ -10,6 +10,9 @@ extractor.py是將維基百科資料轉換為字典之json檔案
 
 ## 下載維基百科資料
 
+資料下載處：https://dumps.wikimedia.org/zhwiki/latest/ 
+
+## 可使用MobaXterm 方便Common Line Interface的操作
 * 下載MobaXterm並安裝完成、登入
 
 https://mobaxterm.mobatek.net/ 
