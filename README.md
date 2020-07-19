@@ -1,51 +1,30 @@
 # Wiki_Extractor
-
-* 先把github上的資料clone到本地端(解壓縮後資料夾名稱為Wiki_Extractor-master)
+``` 
+git clone https://github.com/UDICatNCHU/Wiki_Extractor.git
+```
+或者使用下載方式把 github 上的資料載到本地端（ 解壓縮後資料夾名稱為 Wiki_Extractor-master ）
 
 opencc資料夾為簡體中文轉繁體中文之套件
 
-Wiki_Extractor.py 萃取維基百科內文 (使用 https://github.com/attardi/wikiextractor 所提供的code)
+Wiki_Extractor.py 萃取維基百科內文 （ 使用 https://github.com/attardi/wikiextractor 所提供的 code ）
 
-Wiki_Cleaning.py 將資料轉換為json格式
+Wiki_Cleaning.py 將資料轉換為 json 格式
 
 Wiki_Tokenize.py 將內文進行斷詞
 
-Wiki_to_Word2vec_Data
+Wiki_to_Word2vec_Data 轉換成 Word2vec 的訓練資料格式
+
+
+
 
 ## 下載維基百科資料
 
-資料下載處：https://dumps.wikimedia.org/zhwiki/latest/ 
-or 在 linux 可直接下指令 wget https://dumps.wikimedia.org/zhwiki/latest/zhwiki-latest-pages-articles.xml.bz2
+資料下載處：https://dumps.wikimedia.org/zhwiki/latest/zhwiki-latest-pages-articles.xml.bz2
 
-## 可使用MobaXterm 方便Common Line Interface的操作
-* 下載MobaXterm並安裝完成、登入
-
-https://mobaxterm.mobatek.net/ 
-
-### 登入方式 : 
-
-* 開啟mobaXterm => 點選左上角Session => 點選SSH  
-
-* Remote host : xxx.xxx.xxx.xx
-
-* Specify username : xxx
-
-* port : xxx
-
-* 點選"OK"
-
-* 輸入密碼 : xxxx
-
-
-<img src="https://i.imgur.com/Y9lolhT.jpg" align="left"/>
-
---
-
-* 將左方視窗中zhwiki-latest-pages-articles.xml.bz2檔案下載並放於此專案目錄下(Wiki_Extractor-master資料夾中)
-
-<img src="https://i.imgur.com/JiYPVNG.jpg" align="left"/>
-
---
+在 linux 可直接下指令 
+``` 
+wget https://dumps.wikimedia.org/zhwiki/latest/zhwiki-latest-pages-articles.xml.bz2
+```
 
 ## 切割維基百科、整理資料
 
