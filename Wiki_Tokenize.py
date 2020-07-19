@@ -4,10 +4,11 @@ from udicOpenData.stopwords import *
 import jieba.posseg as pseg
 import jieba
 import re
-import logging
 from tqdm import tqdm
 import pickle
 from pathlib import Path, PurePath
+import argparse
+
 
 STOPWORD_PKL = pickle.load(open(str(PurePath(Path(__file__).resolve().parent, 'stopwords.pkl')), 'rb'))
 STOPWORD_EN_PKL = pickle.load(open(str(PurePath(Path(__file__).resolve().parent, 'stopwords-en.pkl')), 'rb'))
@@ -31,6 +32,7 @@ def main():
     # Required parameters
     parser.add_argument("--file_path", default='./wiki.json', type=str, required=False, help="wiki file path")
     parser.add_argument("--output_path", default='./', type=str, required=False, help="output path")    
+    args = parser.parse_args()
 
     with open(args.file_path) as file:
         data = json.load(file)
@@ -53,10 +55,10 @@ def main():
                 sent_tokens.append(tuple(token))
 
         res.append({'id' : i, 'title' : ele['title'], 'tokens' : doc_tokens})
-
-
-    # print(len(res))
-    logging.info("處理完成總篇數：", len(res))
+        if i % 10000 == 0:
+            print("以處理完成篇數：", i)
+            
+    print("處理完成總篇數：", len(res))
 
     json.dump(res,open(args.output_path + 'wiki_tokenize.json','w'))
 
