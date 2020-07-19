@@ -1,8 +1,7 @@
 # Wiki_Extractor
-``` 
-git clone https://github.com/UDICatNCHU/Wiki_Extractor.git
-```
-或者使用下載方式把 github 上的資料載到本地端（ 解壓縮後資料夾名稱為 Wiki_Extractor-master ）
+抓取維基百科內文
+
+## 檔案說明
 
 opencc資料夾為簡體中文轉繁體中文之套件
 
@@ -14,7 +13,14 @@ Wiki_Tokenize.py 將內文進行斷詞
 
 Wiki_to_Word2vec_Data 轉換成 Word2vec 的訓練資料格式
 
+## 初始化
 
+``` 
+git clone https://github.com/UDICatNCHU/Wiki_Extractor.git
+```
+或者使用下載方式把 github 上的資料載到本地端（ 解壓縮後資料夾名稱為 Wiki_Extractor-master ）
+
+## 安裝所需套件
 
 
 ## 下載維基百科資料
@@ -26,27 +32,14 @@ Wiki_to_Word2vec_Data 轉換成 Word2vec 的訓練資料格式
 wget https://dumps.wikimedia.org/zhwiki/latest/zhwiki-latest-pages-articles.xml.bz2
 ```
 
-## 切割維基百科、整理資料
+## 萃取維基百科內容
 
 因為一個維基百科的檔案過大，需要將他分割成多個小檔案
-
-* 開啟cmd，切換路徑至此專案目錄(切換至Wiki_Extractor-master目錄下)
-
-* 輸入分割檔案指令
-
 ``` 
-python WikiExtractor.py -cb 250K -o wiki_extractor zhwiki-latest-pages-articles.xml.bz2
+python3 Wiki_Extractor.py -b 1024M -o extracted zhwiki-latest-pages-articles.xml.bz2
 ```
+抽取完的資料會跑到 /extracted/AA/
 
-這個指令會將1G大的維基百科資料切割為每一份250K大小、檔案型態為.bz2的檔案
-
--cb 會將每個切割檔案壓縮成.bz2的型態
-
--o 為輸出檔案
-
-指令中的"wiki_extractor"將每個分割好的檔案放入至此資料夾(它會自動新增資料夾，不用手動新增)
-
-* 切割檔案後將資料整理為一個字典之json檔(wiki_data.json)
 
 接著執行 extractor.py 取得一個json檔案，內容如下：
 ``` 
