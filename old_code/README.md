@@ -4,18 +4,13 @@
 
 opencc資料夾為簡體中文轉繁體中文之套件
 
-Wiki_Extractor.py 萃取維基百科內文 (使用 https://github.com/attardi/wikiextractor 所提供的code)
+WikiExtractor.py為分割維基百科檔案之程式
 
-Wiki_Cleaning.py 將資料轉換為json格式
-
-Wiki_Tokenize.py 將內文進行斷詞
-
-Wiki_to_Word2vec_Data
+extractor.py是將維基百科資料轉換為字典之json檔案
 
 ## 下載維基百科資料
 
 資料下載處：https://dumps.wikimedia.org/zhwiki/latest/ 
-or 在 linux 可直接下指令 wget https://dumps.wikimedia.org/zhwiki/latest/zhwiki-latest-pages-articles.xml.bz2
 
 ## 可使用MobaXterm 方便Common Line Interface的操作
 * 下載MobaXterm並安裝完成、登入
