@@ -1,5 +1,5 @@
 # Wiki_Extractor
-抓取維基百科中文資料，簡轉繁並萃取文字內容整理成JSON檔案
+抓取維基百科中文資料，簡轉繁並萃取文字內容整理成 JSON 檔案
 
 ## 檔案說明
 
@@ -42,7 +42,7 @@ python3 Wiki_Extractor.py -b 1024M -o extracted zhwiki-latest-pages-articles.xml
 ```
 萃取完的資料會跑到 /extracted/AA/
 
-## 將內容簡轉繁並整理成json格式
+## 將內容簡轉繁並整理成 Json 格式
 
 ``` 
 python3 Wiki_Cleaning.py
