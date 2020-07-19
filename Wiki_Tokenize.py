@@ -55,8 +55,6 @@ def main():
                 sent_tokens.append(tuple(token))
 
         res.append({'id' : i, 'title' : ele['title'], 'tokens' : doc_tokens})
-        if i % 10000 == 0:
-            print("以處理完成篇數：", i)
             
     print("處理完成總篇數：", len(res))
 

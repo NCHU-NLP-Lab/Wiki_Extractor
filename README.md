@@ -45,7 +45,7 @@ python3 Wiki_Extractor.py -b 1024M -o extracted zhwiki-latest-pages-articles.xml
 ## 將內容簡轉繁並整理成 Json 格式
 
 ``` 
-python3 Wiki_Cleaning.py
+python3 Wiki_Cleaning.py --file_path ./extracted/AA/
 ```
 
 轉換後資料格式
@@ -63,7 +63,7 @@ python3 Wiki_Cleaning.py
 
 ## 將內容依照每一句的內容進行斷詞
 ``` 
-python3 Wiki_Tokenize.py
+python3 Wiki_Tokenize.py --file_path wiki.json
 ```
 轉換後資料格式
 ``` 
@@ -80,7 +80,7 @@ python3 Wiki_Tokenize.py
 
 ## 將維基百科內容轉換成 Word2vec 訓練資料格式
 ``` 
-python3 Wiki_to_Word2vec_Data.py
+python3 Wiki_to_Word2vec_Data.py --file_path wiki_tokenize.json 
 ```
 轉換後資料為
 
