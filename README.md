@@ -11,7 +11,7 @@ Wiki_Cleaning.py 將資料轉換為 json 格式
 
 Wiki_Tokenize.py 將內文進行斷詞
 
-Wiki_to_Word2vec_Data 轉換成 Word2vec 的訓練資料格式
+Wiki_to_Word2vec_Data. 轉換成 Word2vec 的訓練資料格式
 
 ## 初始化
 
@@ -22,6 +22,9 @@ git clone https://github.com/UDICatNCHU/Wiki_Extractor.git
 
 ## 安裝所需套件
 
+``` 
+pip3 install -r requirements.txt
+```
 
 ## 下載維基百科資料
 
@@ -34,38 +37,58 @@ wget https://dumps.wikimedia.org/zhwiki/latest/zhwiki-latest-pages-articles.xml.
 
 ## 萃取維基百科內容
 
-因為一個維基百科的檔案過大，需要將他分割成多個小檔案
 ``` 
 python3 Wiki_Extractor.py -b 1024M -o extracted zhwiki-latest-pages-articles.xml.bz2
 ```
-抽取完的資料會跑到 /extracted/AA/
+萃取完的資料會跑到 /extracted/AA/
 
+## 將內容簡轉繁並整理成json格式
 
-接著執行 extractor.py 取得一個json檔案，內容如下：
 ``` 
-python extractor.py
+python3 Wiki_Cleaning.py
 ```
 
-<img src="https://i.imgur.com/8Xk3rIr.jpg" width="900px"/>
+轉換後資料格式
+``` 
+[
+  { 
+    "id" : (int) 編號 ,
+    "title" : (str) 文章標題  ,
+    "articles" : (str) 文章內容
+  },
+...
+]
+```
+<img src="https://i.imgur.com/gkHUe14.jpg" width="900px"/>
+
+## 將內容依照每一句的內容進行斷詞
+``` 
+python3 Wiki_Tokenize.py
+```
+轉換後資料格式
+``` 
+[
+  { 
+    "id" : (int) 編號 ,
+    "title" : (str) 文章標題  ,
+    "tokens" : (list) 每一句斷詞內容
+  },
+...
+]
+```
+<img src="https://imgur.com/4zn4w3Y.jpg" width="900px"/>
+
+## 將維基百科內容轉換成 Word2vec 訓練資料格式
+``` 
+python3 Wiki_to_Word2vec_Data.py
+```
+轉換後資料為
+
+<img src="https://imgur.com/eCxwp7b.jpg" width="900px"/>
 
 ## 下載資料
 
-底下的連結有我們整理好已斷詞的wiki data
+底下的連結有我們整理好的 wiki data
 
-https://drive.google.com/open?id=1jl_D2jPDo83qHkpXMliZBsp2Pk6B5RWy
-
-分成兩種不同的資料格式
-
-每一種資料格式都有兩種資料，其一為斷詞後無標記詞性，另一個為斷詞後有標記詞性
-
-至於資料格式.....
-### 一個是使用空白將每個詞給斷開
-<img src="https://i.imgur.com/IBy9Y8r.jpg" width="900px" />
-
-<img src="https://i.imgur.com/WbHfgwf.jpg" width="900px" />
-
-### 一個是將每個詞給斷開放入List中
-<img src="https://i.imgur.com/LjVKIy9.jpg" width="900px" />
-
-<img src="https://i.imgur.com/Nd73Joy.jpg" width="900px" />
+https://drive.google.com/drive/folders/1BvVVbRLD-W_954UchTi2KJTYPjqD-LJX?usp=sharing
 
