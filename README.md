@@ -42,7 +42,7 @@ python3 Wiki_Extractor.py -b 1024M -o extracted zhwiki-latest-pages-articles.xml
 ```
 萃取完的資料會跑到 /extracted/AA/
 
-## 將內容簡轉繁並整理成 Json 格式
+## 將文章內容簡轉繁並整理成 Json 格式
 
 ``` 
 python3 Wiki_Cleaning.py --file_path ./extracted/AA/
@@ -61,7 +61,7 @@ python3 Wiki_Cleaning.py --file_path ./extracted/AA/
 ```
 <img src="https://i.imgur.com/gkHUe14.jpg" width="900px"/>
 
-## 將內容依照每一句的內容進行斷詞
+## 依照文章每一句的內容進行斷詞
 ``` 
 python3 Wiki_Tokenize.py --file_path wiki.json
 ```
