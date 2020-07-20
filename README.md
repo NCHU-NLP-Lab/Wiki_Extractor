@@ -16,7 +16,7 @@ Wiki_to_Word2vec_Data. 轉換成 Word2vec 的訓練資料格式
 ## 初始化
 
 ``` 
-git clone https://github.com/UDICatNCHU/Wiki_Extractor.git
+git clone https://github.com/NCHU-NLU-Lab/Wiki_Extractor.git
 ```
 或者使用下載方式把 github 上的資料載到本地端（ 解壓縮後資料夾名稱為 Wiki_Extractor-master ）
 
