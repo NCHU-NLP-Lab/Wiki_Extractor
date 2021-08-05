@@ -24,6 +24,8 @@ def main():
     print("進行簡轉繁中...")
     raw_data = opencc.convert(raw_data)
     print("簡轉繁已完成")
+    with open ('extracted/wiki_zh','w') as file:
+        file.write(raw_data)
 
     res = []
     error_num = 0
@@ -37,14 +39,15 @@ def main():
                     continue
                 else:
                     articles += t
-
+            res.append({'id' : i, 'title' : title,'articles' : articles})
+        
         except Exception as e:
             error_num+=1
-            raise e
-        res.append({'id' : i, 'title' : title,'articles' : articles})
-
+            continue
+            # raise e
+        
     # print(len(res))
-    # print('error_num', error_num)
+    print('error_num', error_num)
     
     print("總篇數：", len(res))
 
