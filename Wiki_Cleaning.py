@@ -27,7 +27,7 @@ def main():
 
     res = []
     error_num = 0
-    for i, doc in enumerate(raw_data.split('<doc ')[1:1000]):
+    for i, doc in enumerate(raw_data.split('<doc ')):
         articles = ''
         try:
             for j, t in enumerate(doc.strip().split('\n')[1:-1]):
